@@ -1,7 +1,24 @@
 /** Dados de contato e região. Nenhum destes valores deve ser escrito direto nos componentes. */
 
+/** Endereço público do site (usado no SEO: link canônico, sitemap e dados estruturados). */
+export const SITE_URL = 'https://juliannevolotao.github.io/manare-babycare/';
+
+/**
+ * Dados da empresa exibidos no rodapé. Campos vazios não aparecem no site:
+ * preencha razão social e CNPJ quando quiser exibi-los.
+ */
+export const EMPRESA = {
+  nome: 'Manarê Baby Care',
+  razaoSocial: '',
+  cnpj: '',
+  regiao: 'Baixada Santista',
+  estado: 'SP',
+} as const;
+
 export const WHATSAPP_NUMERO = '5513997420506';
 export const WHATSAPP_EXIBICAO = '(13) 99742-0506';
+/** Formato internacional, para os dados estruturados do Google. */
+export const TELEFONE_E164 = '+55-13-99742-0506';
 
 export const INSTAGRAM_USUARIO = 'manarebabycare';
 export const INSTAGRAM_URL = `https://www.instagram.com/${INSTAGRAM_USUARIO}/`;

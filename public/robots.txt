@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://juliannevolotao.github.io/manare-babycare/sitemap.xml

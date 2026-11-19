@@ -3,16 +3,44 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Manarê Baby Care</title>
-    <meta name="description" content="Agência de babás qualificadas em Santos, São Vicente, Praia Grande e Guarujá." />
+    <title>Babás em Santos | Manarê Baby Care – Agência de babás na Baixada Santista</title>
+    <meta name="description" content="Agência de babás em Santos, São Vicente, Praia Grande e Guarujá. Babás qualificadas com curso de primeiros socorros, entrevista e teste presencial. Babá avulsa, mensal, para férias e eventos." />
+    <meta name="keywords" content="babá em Santos, babás em Santos, agência de babás em Santos, babá Santos SP, babá São Vicente, babá Praia Grande, babá Guarujá, babá Baixada Santista, babá avulsa, babá para eventos, babá de férias" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://juliannevolotao.github.io/manare-babycare/" />
+    <meta name="geo.region" content="BR-SP" />
+    <meta name="geo.placename" content="Santos" />
     <meta name="theme-color" content="#FBF5EC" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Manarê Baby Care" />
+    <meta property="og:title" content="Manarê Baby Care – Agência de babás em Santos" />
+    <meta property="og:description" content="Babás qualificadas em Santos, São Vicente, Praia Grande e Guarujá. Você conhece a babá antes: entrevista e teste presencial." />
+    <meta property="og:url" content="https://juliannevolotao.github.io/manare-babycare/" />
+    <meta property="og:image" content="https://juliannevolotao.github.io/manare-babycare/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Mão de adulto segurando a mãozinha de um bebê" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script>
+      // Liga a animação de entrada antes da primeira pintura (evita o conteúdo piscar).
+      // Se o app não carregar em 4s, mostra tudo.
+      if ('IntersectionObserver' in window) {
+        document.documentElement.classList.add('js-reveal');
+        setTimeout(function () {
+          if (!document.querySelector('.is-visible')) document.documentElement.classList.remove('js-reveal');
+        }, 4000);
+      }
+    </script>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"><!--app--></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

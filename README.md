@@ -26,6 +26,15 @@ npm run lint
   - `validate.ts`, `fieldStyles.ts` e os componentes de campo.
 - `tailwind.config.ts` — cores, fontes e breakpoints (max-width: 1040, 860, 600 px…) do site original.
 
+## SEO
+
+- `npm run build` pré-renderiza a home: o `dist/index.html` já sai com todo o texto (o Google lê sem precisar rodar JavaScript). Veja `src/entry-server.tsx` e `scripts/prerender.js`.
+- `index.html`: título, descrição, link canônico, Open Graph (prévia no WhatsApp/Instagram/Facebook, imagem `public/og-image.jpg`).
+- `src/components/StructuredData.tsx`: dados estruturados (schema.org) do negócio local e das perguntas frequentes, gerados a partir de `config.ts` e `src/data/faq.ts`.
+- `public/robots.txt` e `public/sitemap.xml`.
+- Se o endereço do site mudar (ex.: domínio próprio), troque `SITE_URL` em `src/config.ts` e as URLs em `index.html`, `robots.txt` e `sitemap.xml`.
+- Razão social e CNPJ: preencha `EMPRESA` em `src/config.ts` para aparecerem no rodapé.
+
 Nenhum dado do cadastro vai para um servidor: fica no navegador da candidata até ela enviar pelo WhatsApp.
 
 ## Publicação
