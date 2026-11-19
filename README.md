@@ -14,6 +14,7 @@ npm run lint
 
 ## Estrutura
 
+- Fontes (Fraunces e Montserrat) hospedadas no próprio site via `@fontsource-variable`, importadas em `src/main.tsx`; nenhuma requisição ao Google Fonts.
 - `src/config.ts` — WhatsApp, Instagram, cidades atendidas e mensagens prontas do WhatsApp.
 - `src/components/` — Header, Footer, Button, Section, Carousel (com pontinhos no celular), WhatsAppIcon.
 - `src/sections/` — seções da home.

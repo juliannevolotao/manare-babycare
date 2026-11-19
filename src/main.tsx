@@ -2,6 +2,11 @@ import { StrictMode } from 'react';
 import { createRoot, hydrateRoot } from 'react-dom/client';
 import { App } from './App';
 import { viewFromHash } from './hooks/useHashRoute';
+// Fontes hospedadas junto com o site (sem requisições ao Google Fonts).
+// Fraunces com eixos de tamanho óptico e peso; Montserrat com peso.
+import '@fontsource-variable/fraunces/opsz.css';
+import '@fontsource-variable/fraunces/opsz-italic.css';
+import '@fontsource-variable/montserrat/index.css';
 import './index.css';
 
 const root = document.getElementById('root');

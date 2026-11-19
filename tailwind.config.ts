@@ -35,8 +35,8 @@ export default {
         ok: '#4F6B3A',
       },
       fontFamily: {
-        display: ['Fraunces', 'Georgia', '"Times New Roman"', 'serif'],
-        body: ['Montserrat', '"Helvetica Neue"', 'Arial', 'sans-serif'],
+        display: ['"Fraunces Variable"', 'Fraunces', 'Georgia', '"Times New Roman"', 'serif'],
+        body: ['"Montserrat Variable"', 'Montserrat', '"Helvetica Neue"', 'Arial', 'sans-serif'],
       },
       maxWidth: { wrap: '1160px' },
       boxShadow: {
