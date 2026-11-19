@@ -1,7 +1,7 @@
 /** Dados de contato e região. Nenhum destes valores deve ser escrito direto nos componentes. */
 
-/** Endereço público do site (usado no SEO: link canônico, sitemap e dados estruturados). */
-export const SITE_URL = 'https://juliannevolotao.github.io/manare-babycare/';
+/** Endereço público do site (vem de VITE_SITE_URL, no arquivo .env ou nas variáveis da Vercel). */
+export const SITE_URL = import.meta.env.VITE_SITE_URL.replace(/\/?$/, '/');
 
 /**
  * Dados da empresa exibidos no rodapé. Campos vazios não aparecem no site:

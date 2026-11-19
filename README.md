@@ -8,7 +8,7 @@ Site da Manarê Baby Care (agência de babás em Santos, São Vicente, Praia Gra
 npm install
 npm run dev        # http://localhost:5173
 npm run build      # gera dist/ (com checagem de tipos)
-npm run preview    # serve dist/ em http://localhost:4173/manare-babycare/
+npm run preview    # serve dist/ em http://localhost:4173
 npm run lint
 ```
 
@@ -31,16 +31,18 @@ npm run lint
 - `npm run build` pré-renderiza a home: o `dist/index.html` já sai com todo o texto (o Google lê sem precisar rodar JavaScript). Veja `src/entry-server.tsx` e `scripts/prerender.js`.
 - `index.html`: título, descrição, link canônico, Open Graph (prévia no WhatsApp/Instagram/Facebook, imagem `public/og-image.jpg`).
 - `src/components/StructuredData.tsx`: dados estruturados (schema.org) do negócio local e das perguntas frequentes, gerados a partir de `config.ts` e `src/data/faq.ts`.
-- `public/robots.txt` e `public/sitemap.xml`.
-- Se o endereço do site mudar (ex.: domínio próprio), troque `SITE_URL` em `src/config.ts` e as URLs em `index.html`, `robots.txt` e `sitemap.xml`.
+- `robots.txt` e `sitemap.xml` são gerados no build (`scripts/prerender.js`).
+- O endereço do site vem de `VITE_SITE_URL` (`.env` ou variáveis da Vercel): link canônico, prévia de links, sitemap e dados estruturados usam esse valor.
 - Razão social e CNPJ: preencha `EMPRESA` em `src/config.ts` para aparecerem no rodapé.
 
 Nenhum dado do cadastro vai para um servidor: fica no navegador da candidata até ela enviar pelo WhatsApp.
 
-## Publicação
+## Publicação (Vercel)
 
-O workflow `.github/workflows/deploy.yml` faz o build e publica `dist/` no GitHub Pages a cada push.
-Na primeira vez, ative em **Settings › Pages › Build and deployment › Source: GitHub Actions**.
-O `base` do Vite (`/manare-babycare/`) está em `vite.config.ts`; se o repositório mudar de nome, ajuste ali.
+1. Em vercel.com › **Add New › Project**, importe este repositório do GitHub.
+2. A Vercel reconhece o Vite sozinha (configuração em `vercel.json`: `npm run build`, pasta `dist`).
+3. Em **Settings › Environment Variables**, defina `VITE_SITE_URL` com o endereço final do site
+   (ex.: `https://manare-babycare.vercel.app/` ou o domínio próprio). Sem ela, vale o valor do arquivo `.env`.
+4. Cada push na branch de produção publica o site; outras branches geram links de prévia.
 
 Site desenvolvido por JVS — instagram.com/juliannevolotao
