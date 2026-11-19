@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root { color-scheme: light; }
+  html { scroll-behavior: smooth; }
+  body {
+    @apply m-0 bg-creme font-body text-cacau antialiased;
+    font-size: 17px;
+    line-height: 1.6;
+  }
+  a { text-decoration: none; }
+  :focus-visible {
+    outline: 3px solid theme('colors.caramelo.DEFAULT');
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  h1, h2, h3 {
+    @apply m-0 font-display font-normal;
+    text-wrap: balance;
+    letter-spacing: -0.02em;
+  }
+  h1 em, h2 em { color: theme('colors.caramelo.DEFAULT'); }
+  input::placeholder, textarea::placeholder { color: #757575; opacity: 1; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition: none !important; animation: none !important; }
+  }
+}
+
+@layer components {
+  .wrap { @apply mx-auto max-w-wrap px-6; }
+
+  .eyebrow {
+    @apply text-[13px] font-semibold uppercase text-caramelo b600:text-xs;
+    letter-spacing: .24em;
+  }
+  @media (max-width: 600px) { .eyebrow { letter-spacing: .16em; } }
+
+  /* Trilho de carrossel abaixo de 600px (scroll-snap, sem barra de rolagem). */
+  .trilho { scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .trilho::-webkit-scrollbar { display: none; }
+}
