@@ -43,3 +43,36 @@
   .trilho { scrollbar-width: none; -webkit-overflow-scrolling: touch; }
   .trilho::-webkit-scrollbar { display: none; }
 }
+
+/*
+ * Revelação ao rolar. O hook useScrollReveal adiciona .js-reveal no <html> e marca
+ * .is-visible quando o elemento entra na tela. Sem JS ou com "reduzir movimento",
+ * tudo aparece normalmente.
+ *  - [data-reveal]: o próprio elemento surge.
+ *  - [data-reveal-group]: os filhos surgem em sequência.
+ * Usa a propriedade `translate` (não `transform`) para não brigar com os efeitos de hover.
+ */
+@media (prefers-reduced-motion: no-preference) {
+  .js-reveal [data-reveal],
+  .js-reveal [data-reveal-group] > * {
+    opacity: 0;
+    translate: 0 28px;
+    transition:
+      opacity .8s cubic-bezier(.2,.65,.3,1) var(--reveal-delay, 0ms),
+      translate .8s cubic-bezier(.2,.65,.3,1) var(--reveal-delay, 0ms),
+      transform .25s ease,
+      box-shadow .25s ease,
+      background-color .2s ease,
+      border-color .2s ease;
+  }
+  .js-reveal [data-reveal].is-visible,
+  .js-reveal [data-reveal-group].is-visible > * {
+    opacity: 1;
+    translate: none;
+  }
+  [data-reveal-group] > :nth-child(2) { --reveal-delay: 90ms; }
+  [data-reveal-group] > :nth-child(3) { --reveal-delay: 180ms; }
+  [data-reveal-group] > :nth-child(4) { --reveal-delay: 270ms; }
+  [data-reveal-group] > :nth-child(5) { --reveal-delay: 360ms; }
+  [data-reveal-group] > :nth-child(n+6) { --reveal-delay: 450ms; }
+}

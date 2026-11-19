@@ -6,7 +6,7 @@ import { INSTAGRAM_USUARIO, MENSAGENS_WHATSAPP, WHATSAPP_EXIBICAO, linkWhatsApp 
 export function Contact() {
   return (
     <section id="contato" className="bg-cacau py-[104px] text-center text-creme">
-      <div className="wrap flex flex-col items-center gap-6">
+      <div data-reveal-group className="wrap flex flex-col items-center gap-6">
         <img src={borboletaCreme} alt="" aria-hidden="true" className="w-16" />
         <h2 className="text-[clamp(38px,5vw,62px)] leading-[1.05] [&_em]:text-areia">
           Vamos <em>conversar?</em>

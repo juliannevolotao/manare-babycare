@@ -57,6 +57,7 @@ export function Cadastro() {
           <div
             ref={boxRef}
             id="cad-box"
+            data-reveal
             aria-live="polite"
             className="mx-auto max-w-[720px] rounded-[28px] border border-linha bg-branco px-9 pb-7 pt-[34px] b600:rounded-[22px] b600:px-5 b600:pb-5 b600:pt-6"
           >

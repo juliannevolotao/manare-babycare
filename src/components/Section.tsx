@@ -24,7 +24,7 @@ interface SectionHeadProps {
 
 export function SectionHead({ eyebrow, title, text, compact = false }: SectionHeadProps) {
   return (
-    <div className={`flex max-w-[640px] flex-col gap-3.5 ${compact ? 'mb-7' : 'mb-12'}`}>
+    <div data-reveal className={`flex max-w-[640px] flex-col gap-3.5 ${compact ? 'mb-7' : 'mb-12'}`}>
       <span className="eyebrow">{eyebrow}</span>
       <h2 className="text-[clamp(34px,4.4vw,52px)] leading-[1.08]">{title}</h2>
       {text && <p className="text-lg">{text}</p>}

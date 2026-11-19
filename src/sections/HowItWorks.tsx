@@ -20,7 +20,7 @@ export function HowItWorks() {
         }
         text="Cada etapa é pensada para você se sentir segura com a escolha."
       />
-      <ol className="grid grid-cols-[repeat(5,1fr)] gap-5 b1000:grid-cols-[repeat(2,1fr)] b520:grid-cols-[repeat(1,1fr)]">
+      <ol data-reveal-group className="grid grid-cols-[repeat(5,1fr)] gap-5 b1000:grid-cols-[repeat(2,1fr)] b520:grid-cols-[repeat(1,1fr)]">
         {PASSOS.map((p, i) => (
           <li key={p.titulo} className="flex flex-col gap-2.5 rounded-[20px] border border-linha bg-branco px-6 py-7">
             <span aria-hidden="true" className="font-display text-[44px] leading-none text-caramelo">

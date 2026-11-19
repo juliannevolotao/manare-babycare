@@ -6,6 +6,8 @@ interface CarouselProps {
   /** Classes extras para a linha de pontinhos. */
   dotsClassName?: string;
   label?: string;
+  /** Os itens surgem em sequência ao entrar na tela. */
+  reveal?: boolean;
   children: ReactNode;
 }
 
@@ -13,7 +15,7 @@ interface CarouselProps {
  * Carrossel genérico. O layout (grade ou trilho) vem das classes do pai; este componente
  * só acompanha a rolagem e mostra os pontinhos, que aparecem apenas abaixo de 600px.
  */
-export function Carousel({ className, dotsClassName = '', label, children }: CarouselProps) {
+export function Carousel({ className, dotsClassName = '', label, reveal = true, children }: CarouselProps) {
   const trackRef = useRef<HTMLDivElement>(null);
   const [active, setActive] = useState(0);
   const count = Children.count(children);
@@ -32,7 +34,7 @@ export function Carousel({ className, dotsClassName = '', label, children }: Car
 
   return (
     <>
-      <div ref={trackRef} className={`trilho ${className}`} onScroll={onScroll} aria-label={label} role={label ? 'region' : undefined}>
+      <div ref={trackRef} className={`trilho ${className}`} onScroll={onScroll} data-reveal-group={reveal || undefined} aria-label={label} role={label ? 'region' : undefined}>
         {children}
       </div>
       <div className={`mt-3.5 hidden justify-center gap-1.5 b600:flex ${dotsClassName}`} aria-hidden="true">

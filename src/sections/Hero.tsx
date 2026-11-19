@@ -8,7 +8,7 @@ export function Hero() {
   return (
     <section className="pb-[88px] pt-[72px] b600:pb-14 b600:pt-9">
       <div className="wrap grid grid-cols-[1.05fr_.95fr] items-center gap-16 b860:grid-cols-[repeat(1,1fr)] b860:gap-11 b600:gap-8">
-        <div className="flex flex-col gap-7 b600:gap-[22px]">
+        <div data-reveal-group className="flex flex-col gap-7 b600:gap-[22px]">
           <span className="eyebrow">Agência de babás · Baixada Santista</span>
           <h1 className="text-[clamp(42px,5.8vw,74px)] leading-[1.02]">
             Onde o cuidado <em>encontra abrigo</em>
@@ -45,7 +45,7 @@ export function Hero() {
             </span>
           </p>
         </div>
-        <div className="relative">
+        <div data-reveal className="relative [--reveal-delay:200ms]">
           <img
             src={maos}
             alt="Mão de adulto segurando a mãozinha de um bebê sobre uma manta de tricô"

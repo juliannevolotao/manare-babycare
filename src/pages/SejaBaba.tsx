@@ -23,7 +23,7 @@ export function SejaBaba() {
   return (
     <div id="seja-baba">
       <section className="pb-14 pt-[72px]">
-        <div className="wrap flex max-w-[820px] flex-col gap-6">
+        <div data-reveal-group className="wrap flex max-w-[820px] flex-col gap-6">
           <a href="#inicio" className="inline-flex items-center gap-2 text-[15px] font-semibold text-caramelo">
             ← Voltar ao site
           </a>
@@ -46,7 +46,7 @@ export function SejaBaba() {
       </section>
 
       <section>
-        <div className="wrap grid grid-cols-[repeat(2,1fr)] gap-5 b760:grid-cols-[repeat(1,1fr)]">
+        <div data-reveal-group className="wrap grid grid-cols-[repeat(2,1fr)] gap-5 b760:grid-cols-[repeat(1,1fr)]">
           <div className={boxClass}>
             <span className="eyebrow">O que buscamos</span>
             <h2 className="text-[32px] leading-[1.1]">Perfil da babá Manarê</h2>
@@ -88,7 +88,7 @@ export function SejaBaba() {
 
       <section className="pb-24 pt-14">
         <div className="wrap">
-          <div className="flex flex-col items-center gap-[18px] rounded-[32px] bg-cacau px-10 py-14 text-center text-creme">
+          <div data-reveal className="flex flex-col items-center gap-[18px] rounded-[32px] bg-cacau px-10 py-14 text-center text-creme">
             <img src={borboletaCreme} alt="" aria-hidden="true" className="w-14" />
             <h2 className="text-[clamp(32px,4vw,46px)] [&_em]:text-areia">
               Faça parte da <em>nossa equipe</em>

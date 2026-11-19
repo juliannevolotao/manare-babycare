@@ -55,6 +55,7 @@ export function Selection() {
           alt="Mãos segurando uma prancheta e uma xícara de café sobre a mesa"
           width={1200}
           height={1500}
+          data-reveal
           className="aspect-square h-auto max-h-[480px] w-full rounded-[28px] object-cover object-[center_30%]"
         />
         <div>
@@ -68,7 +69,7 @@ export function Selection() {
             }
             text="Antes de chegar à sua casa, cada babá passa pelo nosso processo de seleção."
           />
-          <div className="mt-2 flex flex-col gap-[22px]">
+          <div data-reveal-group className="mt-2 flex flex-col gap-[22px]">
             {CRITERIOS.map((c) => (
               <div key={c.titulo} className="grid grid-cols-[44px_1fr] items-start gap-4">
                 <span className="flex h-11 w-11 items-center justify-center rounded-full bg-areia">
